@@ -7,24 +7,24 @@ function Navbar() {
   const handleClick = () => setNav(!navig)
 
     return (
-        <div className='w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg'>
+        <div className='w-screen h-[80px] z-10 bg-yellow-600 fixed drop-shadow-lg'>
             <div className='flex items-center justify-between w-full h-full px-2'>
               <div className='flex items-center'>
-                <h1 className='mr-4 text-3xl text-yellow-800 font-bold sm:text-4xl pl-2'>Artisty</h1>
+                <h1 className='mr-4 text-3xl text-white font-bold sm:text-4xl pl-2'>Artisty</h1>
               </div>
-              <div className='hidden md:flex pr-4'>
+              <div className='hidden md:flex pr-4 text-white'>
                 <ul className='hidden md:flex'>
-                  <li className='hover:bg-slate-300 cursor-pointer rounded-xl'><Link to="home" smooth={true} duration={500}>Home</Link></li>
-                  <li className='hover:bg-slate-300 cursor-pointer rounded-xl'><Link to="about" smooth={true} offset={-200} duration={500}>About</Link></li>
-                  <li className='hover:bg-slate-300 cursor-pointer rounded-xl'><Link to="gallery" smooth={true} offset={-50} duration={500}>Gallery</Link></li>
+                  <li className='hover:bg-yellow-700 cursor-pointer rounded-xl'><Link to="home" smooth={true} duration={500}>Home</Link></li>
+                  <li className='hover:bg-yellow-700 cursor-pointer rounded-xl'><Link to="about" smooth={true} offset={-200} duration={500}>About</Link></li>
+                  <li className='hover:bg-yellow-700 cursor-pointer rounded-xl'><Link to="gallery" smooth={true} offset={-50} duration={500}>Gallery</Link></li>
                 </ul>
 
-                <button className='px-8 py-3 bg-transparent text-yellow-600 mr-4 signinBtn'>Sign Up</button>
+                <button className='px-8 py-3 bg-transparent mr-4 signinBtn'>Sign Up</button>
                 <button className='px-8 py-3'>Sign In</button>
               </div>
 
               <div className='md:hidden mr-2' onClick={handleClick}>
-                {(!navig ? <Bars3Icon className="h-6 w-6 text-slate-900"/> : <XMarkIcon className='h-6 w-6 text-slate-900' />)}
+                {(!navig ? <Bars3Icon className="h-6 w-6 text-white"/> : <XMarkIcon className='h-6 w-6 text-white' />)}
               </div>
             </div>
 

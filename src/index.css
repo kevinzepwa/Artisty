@@ -29,10 +29,10 @@ body {
   }
   button {
       @apply text-white border bg-yellow-700 border-yellow-700 text-sm
-      hover:bg-transparent hover:text-yellow-600 rounded-md 
+      hover:bg-transparent rounded-md 
   }
   .signinBtn {
-      @apply  border border-yellow-800
+      @apply  text-white border border-white
       hover:bg-yellow-700 hover:text-white rounded-md 
   }
   * {
