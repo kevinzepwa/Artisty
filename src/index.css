@@ -29,7 +29,7 @@ body {
   }
   button {
       @apply text-white border bg-yellow-700 border-yellow-700 text-sm
-      hover:bg-transparent rounded-md 
+      hover:bg-zinc-300 hover:text-yellow-700 rounded-md 
   }
   .signinBtn {
       @apply  text-white border border-white
