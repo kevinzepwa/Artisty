@@ -43,3 +43,8 @@ body {
       @apply font-sans text-5xl
   }
 }
+
+#home {
+  background: url("./assets/bgImg.png");
+  background-repeat: no-repeat;
+}
