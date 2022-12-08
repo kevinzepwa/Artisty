@@ -11,3 +11,4 @@ function ArtList({ arts }) {
 }
 
 export default ArtList;
+
