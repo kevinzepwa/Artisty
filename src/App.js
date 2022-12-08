@@ -1,49 +1,43 @@
-import './App.css';
-import React, { useState, useEffect } from "react";
-import Header from './Components/Header';
-import Signup from './Components/Signup';
-import Addart from './Components/Addart';
-import Navbar from './Components/Navbar';
+import Hero from "./Components/Hero";
+import NavBar from "./Components/NavBar"
+import Navbar from "./Components/Navbar";
+import Stats from "./Components/Stats";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./Components/Footer";
-import Gallery from './Components/Gallery';
+import Addart from "./Components/Addart"
+import Gallery from "./Components/Gallery"
+import React, { useState, useEffect } from "react";
+import Homepage from "./Components/Homepage"
+
+
+
 
 
 function App() {
-  const [cards, setCards] = useState([]);
-  const [reading, setReading] = useState([]);
-
-  useEffect(() => {
-    fetch(``)
-    .then((res) => res.json())
-    .then((bookInfo) => {
-      setCards(bookInfo);
-    });
-  }, []);
-
-  const handleAddBooks = (book) =>{
-    const BookExist = reading.find((item) => item.id === book.id);
-    if (!BookExist){
-      setReading([...reading, book])
-    }
+  const [arts, setArts]=useState([])
+  useEffect(()=>{
+    fetch('http://localhost:3000/arts')
+    .then(res=>res.json())
+    .then(data=>setArts(data))
+  },[])
+  function onAddNew(data){
+    setArts([...arts,data])
   }
   return (
-<div className='App'>
+    <div>
+      <Navbar/>
+      <Hero/>
+      <Stats/>
+    
+   {/* <NavBar/>
+    <Routes>  
+    <Route path="/gallery" element={<Gallery arts={arts} onAddNew={onAddNew}/>}/> */}
+    {/* <Route path="/favorite" element={<Favorite />}/> */}
+    {/* <Route path="/addart" element={<Addart/>}/> */}
+    {/* <Route path="/" element={<Hero/>}/> */}
 
-  {/* <Header/>
-  <Signup/> */}
-  <Navbar/>
-  <Routes>
-  <Route path="/gallery" element={<Gallery
-          cards={cards}
-          setCards={setCards}
-          handleAddBooks={handleAddBooks} />}></Route>
-  <Route path="/Addart" element={<Addart/>}></Route>
-  </Routes>
-  <Footer/>
-
-
-</div>
+  
+    {/* </Routes> */}
+    </div>
   );
 }
 

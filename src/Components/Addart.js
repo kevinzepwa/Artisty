@@ -4,7 +4,7 @@ const AddList = ({ arts, setarts}) => {
     const [addListForm, setAddListForm] = useState({
       id: 0,
       title: "",
-      image_url: "",
+      imageUrl: "",
       genre: "",
       publisher: "",
       rating: 0
@@ -19,7 +19,7 @@ const AddList = ({ arts, setarts}) => {
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-        fetch(``, {
+        fetch(`http://localhost:3000/arts`, {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -62,7 +62,7 @@ const AddList = ({ arts, setarts}) => {
                     <input
                       type="text"
                       className="form-control"
-                      name="image_url"
+                      name="imageUrl"
                       placeholder="Enter image url"
                       onChange={handleChange}
                     />

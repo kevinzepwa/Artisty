@@ -1,26 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './Card';
 
-const Gallery = ({cards, setCards, handleAddBooks}) => {
-    const displayCards = cards.map((book) => (
-        <Card
-          key={book.id}
-          book={book}
-          handleAddBooks={handleAddBooks}
-          cards={cards}
-          setCards={setCards}
-        />
-      ));
-  return (
-    <>
-      <div className="container">
-        <h1>Gallery</h1>
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
-          {displayCards}
-        </div>
-      </div>
-    </>
-  );
-};
+function Gallery({arts,onAddNew}){
+  const [formdata,setformdata]=useState({
+    title:"",
+    genre:"",
+    imageUrl:"",
+    owner:"",
+    rating:""
+  })
+  const artlist=arts.map(arts=>
+  {
+    return<Card
+    key={arts.id} title={arts.title} genre={arts.genre} imageUrl={arts.imageUrl} owner={arts.owner} rating={arts.rating}
+    />
+  })
+  function handleChange(e){
+    setformdata({...formdata, [e.target.name]:e.target.value})
 
-export default Gallery;
+  }
+  function handleSubmit(e){
+    e.preventDefault()
+    // console.log(JSON.stringify(formdata))
+    fetch('http://localhost:3000/arts',
+    {
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+        "Application":"application/json"
+      },
+      body:JSON.stringify(formdata)
+      }
+    )
+    .then(res=>res.json())
+    .then(data=>{
+      onAddNew(data)
+    })
+    }
+
+    return(
+      <div>
+        <ul>
+          {artlist}
+        </ul>
+      </div>
+
+    )
+
+
+    }
+export default Gallery
