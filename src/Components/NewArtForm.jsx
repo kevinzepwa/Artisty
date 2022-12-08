@@ -4,6 +4,7 @@ function NewArtForm({ onAddArt }) {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,6 +17,7 @@ function NewArtForm({ onAddArt }) {
         name: name,
         image: image,
         price: price,
+        description: description,
       }),
     })
       .then((r) => r.json())
@@ -39,6 +41,13 @@ function NewArtForm({ onAddArt }) {
           placeholder="Image URL"
           value={image}
           onChange={(e) => setImage(e.target.value)}
+        />
+        <input
+          type="text"
+          name="description"
+          placeholder="Add description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
         />
         <input
           type="number"
