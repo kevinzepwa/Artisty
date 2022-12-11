@@ -1,28 +1,40 @@
 import React, { useState } from 'react'
 import Card from './Card';
 
-function Gallery({arts,onAddNew}){
+function Gallery({arts,onAddNew,onDelete,onUpdate}){
   const [formdata,setformdata]=useState({
     title:"",
     genre:"",
     imageUrl:"",
     owner:"",
-    rating:""
+    rating:"",
+    like:false
   })
   const artlist=arts.map(arts=>
   {
     return<Card
-    key={arts.id} title={arts.title} genre={arts.genre} imageUrl={arts.imageUrl} owner={arts.owner} rating={arts.rating}
+    key={arts.id} 
+    id={arts.id}
+    title={arts.title} 
+    genre={arts.genre} 
+    imageUrl={arts.imageUrl} 
+    owner={arts.owner} 
+    rating={arts.rating}
+    like={arts.like}
+    onDelete={onDelete}
+    onUpdate={onUpdate}
+
     />
   })
   function handleChange(e){
     setformdata({...formdata, [e.target.name]:e.target.value})
 
   }
+
   function handleSubmit(e){
     e.preventDefault()
     // console.log(JSON.stringify(formdata))
-    fetch('http://localhost:3000/arts',
+    fetch('http://localhost:8000/arts',
     {
       method:"POST",
       headers:{
@@ -40,7 +52,7 @@ function Gallery({arts,onAddNew}){
 
     return(
       <div>
-        <ul>
+        <ul className='cards3'>
           {artlist}
         </ul>
       </div>

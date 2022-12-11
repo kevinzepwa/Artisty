@@ -1,5 +1,5 @@
 import React, {useState,setState} from 'react';
-import './styles.css'
+
 
 function Signup() {
 
@@ -60,7 +60,7 @@ function Signup() {
         </div>
         <div className='Already'>
             <h6>Already have an account?</h6>
-            <a href="./Login.js" target="_blank">Log in</a>
+            <a className='link' href="./Login.js" target="_blank">Log in</a>
 
 
         </div>

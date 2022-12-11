@@ -19,7 +19,7 @@ const AddList = ({ arts, setarts}) => {
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3000/arts`, {
+        fetch(`http://localhost:8000/arts`, {
           method: "POST",
           headers: {
             Accept: "application/json",

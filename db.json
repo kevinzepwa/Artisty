@@ -1,52 +1,57 @@
 {
   "arts": [
     {
-      "id": 1,
-      "title": "art1",
-      "imageUrl": "https://images.unsplash.com/photo-1533735380053-eb8d0759b24a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      "genre": "Expressionism.",
-      "owner": "sharon",
-      "rating": 1
-    },
-    {
-      "id": 2,
-      "title": "art2",
-      "imageUrl": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      "genre": "Surrealism",
-      "owner": "christine",
-      "rating": 7
-    },
-    {
-      "id": 3,
-      "title": "art3",
-      "imageUrl": "https://images.unsplash.com/photo-1544273677-c433136021d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      "genre": "Impressionism",
-      "owner": "kyle",
-      "rating": 9
-    },
-    {
-      "id": 4,
-      "title": "art4",
-      "imageUrl": "https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "genre": "Romanticism.",
-      "owner": "Gordon",
-      "rating": 6
-    },
-    {
-      "id": 5,
-      "title": "art5",
-      "imageUrl": "https://images.unsplash.com/photo-1563305123-1548e19a200e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "genre": "Abstract Art",
-      "owner": "wendy",
-      "rating": 4
-    },
-    {
       "id": 6,
       "title": "art8",
       "imageUrl": "https://images.unsplash.com/photo-1541262678642-edc1bf8b24fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
       "genre": "trial",
       "publisher": "Dan",
-      "rating": "5"
+      "rating": "5",
+      "like": true
+    },
+    {
+      "id": 7,
+      "title": "art10",
+      "imageUrl": "https://images.unsplash.com/photo-1535376472810-5d229c65da09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "genre": "Metallic",
+      "publisher": "Vinicius amano",
+      "rating": "6",
+      "like": true
+    },
+    {
+      "id": 8,
+      "title": " birds ",
+      "imageUrl": "https://images.unsplash.com/photo-1580192985029-9b0e4679a180?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGFydCUyMGRyYXdpbmdzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "genre": "Nature",
+      "publisher": "Museums Victoria",
+      "rating": "6",
+      "like": true
+    },
+    {
+      "id": 9,
+      "title": "Europeana",
+      "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "genre": "Flowers",
+      "publisher": "Vinicius amano",
+      "rating": "4"
+    },
+    {
+      "id": 10,
+      "title": "Renaissance",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "genre": "history",
+      "publisher": "Vinicius amano",
+      "rating": "4",
+      "like": true
+    },
+    {
+      "id": 11,
+      "title": "painty",
+      "imageUrl": "https://images.unsplash.com/photo-1549490349-8643362247b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGFydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "genre": "painty",
+      "publisher": "Maria Orlova",
+      "rating": "4",
+      "like": false
     }
   ]
 }
