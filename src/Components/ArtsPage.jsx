@@ -18,14 +18,16 @@ function ArtsPage() {
   ]
   
   const [arts, setArts] = useState(demoData);
-  //useEffect(() => {
-    //fetch("http://localhost:3000")
-    //fetch("/arts")
-      //.then((r) => r.json())
-      //.then((artsArray) => {
-        //setArts(artsArray);
-      //});
-  //}, []);
+  //const baseUrl = "https://artisty-production.up.railway.app/admins"
+  const baseUrl = "https://art-data.glitch.me/data"
+  
+  useEffect(() => {
+    fetch(baseUrl)
+      .then((r) => r.json())
+      .then((artsArray) => {
+        setArts(artsArray);
+      });
+  }, []);
 
   function handleAddArt(newArt) {
     const updatedArtsArray = [...arts, newArt];
@@ -46,3 +48,4 @@ function ArtsPage() {
 }
 
 export default ArtsPage;
+

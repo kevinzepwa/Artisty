@@ -24,11 +24,13 @@ function ArtCard({ art }) {
           Art is available
         </button>
       ) : (
-        <button onClick={handleToggleAvailable}>We have just sold it</button>
+        <button className="p-2 mr-2" onClick={handleToggleAvailable}>
+          We just sold it
+        </button>
       )}
       <button className="primary p-2 ml-2" onClick={handleLike}>
           Like
-        </button>
+      </button>
     </li>
   );
 }
