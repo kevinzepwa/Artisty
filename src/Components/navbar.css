@@ -1,0 +1,35 @@
+.nav{
+    display: flex;
+    font-size: larger;
+    background-color:#fca311;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+  }
+  .navh1{
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .navlinks{
+  padding: 10%;
+  
+  }
+  .nav-list ul li{
+    margin-left: 8%;
+        display: inline-block;
+        padding-top: 3%; 
+        }
+    .nav-list{
+    width: 40%;
+        }
+    .nav-list ul li a{
+            color: rgb(250, 247, 247);
+            text-decoration: none;
+           }
+          .nav-list ul li a:hover{
+           border-bottom: 4px solid #0a0a0a ;
+        }
