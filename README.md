@@ -69,8 +69,8 @@ Simply run
   $rails s: then http://localhost:3000 in your browser
    to specify the what you want to access:
    you can run:-
-   http://localhost:3000/artisty - to get the whole cocktails data
-   http://localhost:3000/artisty-api/1 - to get the cocktail with an id of 1
+   http://localhost:3000/artisty - to get the whole arts data
+   http://localhost:3000/artisty-api/1 - to get the art with an id of 1
 
 Resources:
 
